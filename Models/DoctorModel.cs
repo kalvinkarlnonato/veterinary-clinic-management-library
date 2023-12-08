@@ -37,15 +37,22 @@ namespace VCMS.Library.Models
         /// </summary>
         public DateTime Birthday { get; set; }
         /// <summary>
-        /// Returns the Last name and First name of the veterinarian
+        /// Returns the age based on the year of birth
         /// </summary>
         public int Age
         {
             get { return DateTime.Now.Year - Birthday.Year; }
         }
+        /// <summary>
+        /// Returns the Last name and First name of the veterinarian
+        /// </summary>
         public string FullName
         {
             get { return $"{FirstName} {LastName}"; }
         }
+        /// <summary>
+        /// This will be the schedules of the doctors
+        /// </summary>
+        public List<ScheduleModel> Schedules { get; set; }
     }
 }

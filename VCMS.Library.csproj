@@ -49,6 +49,7 @@
     <Compile Include="Models\DoctorModel.cs" />
     <Compile Include="Models\OwnerModel.cs" />
     <Compile Include="Models\PetModel.cs" />
+    <Compile Include="Models\ScheduleModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

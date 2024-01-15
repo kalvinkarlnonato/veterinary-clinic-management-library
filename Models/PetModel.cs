@@ -19,7 +19,7 @@ namespace VCMS.Library.Models
         /// <summary>
         /// Represents the pet name
         /// </summary>
-        public string Name { get; set; }
+        public string PetName { get; set; }
         /// <summary>
         /// Represents the type of the pet
         /// </summary>
@@ -46,10 +46,6 @@ namespace VCMS.Library.Models
         public DateTime DateVisit { get; set; }
         /// <summary>
         /// Represents the date of next visit
-        /// </summary>
-        public DateTime NextVisit { get; set; }
-        /// <summary>
-        /// This will be the list of Checkups of this pet
         /// </summary>
         public List<CheckupModel> Checkups { get; set; } = new List<CheckupModel>();
     }

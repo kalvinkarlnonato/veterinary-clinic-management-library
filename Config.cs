@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -36,6 +37,19 @@ namespace VCMS.Library
             phone = regex.Replace(phone, "");
             phone = Regex.Replace(phone, @"(\d{4})(\d{3})(\d{4})", "$1-$2-$3");
             return phone;
+        }
+
+        public static string ConString(string name)
+        {
+            return ConfigurationManager.ConnectionStrings[name].ConnectionString;
+        }
+
+        public static class CurrentUser
+        {
+            public static int DocID;
+            public static int AccountID;
+            public static string Name;
+            public static string Role;
         }
     }
 }
